@@ -36,3 +36,5 @@ for i in range(len(listsent)):
         if listsent[i] == word:
             wcount+=1
     print(word+' '+str(wcount))
+    print(len(listsent))
+    print(i)
