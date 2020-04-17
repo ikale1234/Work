@@ -6,13 +6,17 @@ def build(dir):
     wordbank = []
     verbs =  os.listdir(dir+"\\Verbs")
     nouns = os.listdir(dir+"\\Nouns")
+
+    #  verbs
     for i in range(len(verbs)):
         curfile = open(dir+"\\Verbs\\"+verbs[i], "r")
         templist = []
 
 
         for j in range(5):
-            templist.append(curfile.readline()[:-1])
+            templist.append(curfile.readline())
+            if templist[j][-1:] == "\n":
+                templist[j] = templist[j][:-1]
             templist[j] = templist[j].split(",")
         curfile.close()
         #check
@@ -24,6 +28,8 @@ def build(dir):
                 good = True
         if good:
             verbbank.append(templist)
+
+    # nouns
     for i in range(len(nouns)):
         curfile = open(dir+"\\Nouns\\"+nouns[i], "r")
         templist = []
