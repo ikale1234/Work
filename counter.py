@@ -1,11 +1,8 @@
 what = input("Please enter the name of a txt file and directory if not in Work:")
-
 thefile = open(what, "r")
 string = thefile.read()
-letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
-lis = []
-#for i in range(len(letters)):
- #   lis.append(i)
+thefile.close()
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
 wcount = 0
 lcount = 1
 aword = False
